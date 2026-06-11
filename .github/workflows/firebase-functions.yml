@@ -23,7 +23,11 @@ jobs:
         working-directory: ./functions 
         run: npm install
 
+      # - name: Deploy Firebase Functions
+      #   env:
+      #     GOOGLE_APPLICATION_CREDENTIALS: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+      #   run: firebase deploy --only functions
       - name: Deploy Firebase Functions
         env:
-          GOOGLE_APPLICATION_CREDENTIALS: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
         run: firebase deploy --only functions
