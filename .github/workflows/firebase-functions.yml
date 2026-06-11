@@ -22,7 +22,7 @@ jobs:
         # This installs firebase-tools from your project dependencies, or safely fallback
         run: |
           npm install -g firebase-tools
-          npm ci
+          npm install
 
       - name: Deploy Firebase Functions
         # Firebase automatically catches credential payloads mapped to this env block
