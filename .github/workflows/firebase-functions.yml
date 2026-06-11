@@ -30,4 +30,4 @@ jobs:
       - name: Deploy Firebase Functions
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
-        run: firebase deploy --only functions
+        run: firebase deploy --only functions --force
